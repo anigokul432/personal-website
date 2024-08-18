@@ -13,56 +13,81 @@ const projects = [
     logo: '/path/to/logo1.png',
     name: 'Skill Swipe',
     description: 'Mobile app that connects UCLA recruiters and job seekers using a heuristic-based matchmaking algorithm.',
-    techStack: 'React, MongoDB, Express, Node, AWS S3, Styled Components'
+    techStack: 'React, MongoDB, Express, Node, AWS S3, Styled Components',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
+    
   },
   {
     id: 2,
     logo: '/path/to/logo2.png',
     name: 'Clever Cloud',
     description: 'AI-driven file management platform integrating vector search with O(1) time complexity for content-based search and 3D visualization.',
-    techStack: 'React, Flask, Python, Pinecone, MinIO'
+    techStack: 'React, Flask, Python, Pinecone, MinIO',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
   },
   {
     id: 3,
     logo: '/path/to/logo3.png',
     name: 'Denote',
     description: 'An all-in-one note-taking app with AI-driven features, supporting dynamic educational tools with smart prompts and auto-complete notes.',
-    techStack: 'React, Electron, Node.js, p5.js, Desmos API, OpenAI GPT API'
+    techStack: 'React, Electron, Node.js, p5.js, Desmos API, OpenAI GPT API',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
   },
   {
     id: 4,
     logo: '/path/to/logo4.png',
     name: 'AI Finance Coach',
     description: 'Developed user and admin dashboards with AI-driven features to predict credit score trends and offer personalized financial advice.',
-    techStack: 'React, Angular, FastAPI, Azure, OpenAI GPT API'
+    techStack: 'React, Angular, FastAPI, Azure, OpenAI GPT API',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
   }, 
   {
     id: 5,
     logo: '/path/to/logo5.png',
     name: 'Sea of Prospects',
     description: 'Ocean simulation game with rigid body physics, cloth simulation, and boid system. Navigate and collect treasures while avoiding obstacles and sharks!',
-    techStack: 'JavaScript, HTML, CSS, tiny-graphics.js, p5.js, Euler Integration'
+    techStack: 'JavaScript, HTML, CSS, tiny-graphics.js, p5.js, Euler Integration',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
   },
   {
     id: 6,
     logo: '/path/to/logo5.png',
     name: 'Website URL Shortener',
     description: 'Web application that shortens URLs and allows users to customize the subdirectory of the shortened link.',
-    techStack: 'HTML, CSS, JavaScript, Tailwind CSS, Flask, SQLAlchemy'
+    techStack: 'HTML, CSS, JavaScript, Tailwind CSS, Flask, SQLAlchemy',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
   },  
   {
     id: 7,
     logo: '/path/to/logo6.png',
     name: 'Live Weather App',
     description: 'A weather app that retrieves data from the OpenWeatherAPI, with features like location-based search and time management.',
-    techStack: 'React, Tailwind CSS, OpenWeatherAPI, Luxon'
+    techStack: 'React, Tailwind CSS, OpenWeatherAPI, Luxon',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
   },
   {
     id: 8,
     logo: '/path/to/logo7.png',
     name: 'Rope and Cloth Simulator',
     description: 'This program simulates rope and cloth physics using Euler integration for accurate physics simulation.',
-    techStack: 'HTML, CSS, JavaScript, p5.js, Euler Integration'
+    techStack: 'HTML, CSS, JavaScript, p5.js, Euler Integration',
+    demoLink: 'https://example.com/demo1',
+    frontendLink: 'https://github.com/example/frontend1',
+    backendLink: 'https://github.com/example/backend1'
   },
 ];
 
@@ -168,6 +193,11 @@ const App: React.FC = () => {
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
                 <p><strong>Tech Used:</strong> {project.techStack}</p>
+                <div className="project-links">
+                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-demo-link">Demo</a>
+                  <a href={project.frontendLink} target="_blank" rel="noopener noreferrer" className="project-link">Frontend</a>
+                  <a href={project.backendLink} target="_blank" rel="noopener noreferrer" className="project-link">Backend</a>
+                </div>
               </div>
             </div>
           ))}

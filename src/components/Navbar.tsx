@@ -34,6 +34,11 @@ const Navbar: React.FC<NavbarProps> = ({ opaque }) => {
           </Link>
         </li>
         <li>
+          <Link to="education" smooth={true} duration={500} offset={-10}>
+            Education
+          </Link>
+        </li>
+        <li>
           <a href="mailto:anigokul432@gmail.com">Contact</a>
         </li>
       </ul>

@@ -1,5 +1,3 @@
-/* src/App.css */
-
 /* General styles for sections */
 .home-section, .projects-section, .experience-section, .education-section {
   display: flex;
@@ -98,7 +96,7 @@
 /* Grid layout adjustments */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increase minimum width for larger cards */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -108,13 +106,12 @@
 .project-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
+  align-items: flex-start;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease;
-  /* height: 300px; Increase height for more content */
 }
 
 .project-item:hover {
@@ -124,7 +121,7 @@
 .project-logo {
   width: 80px;
   height: 80px;
-  margin-bottom: 20px; /* Space below the logo */
+  margin-bottom: 20px;
 }
 
 .project-details h3 {
@@ -139,7 +136,46 @@
   font-size: 1.1rem;
   color: #666;
   text-align: left;
+}
 
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.project-link {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #1e3c72;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-demo-link {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #2a5298;
+  border: 1px solid transparent; /* Initially, no border */
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.project-demo-link:hover {
+  background-color: #ffffff; /* Change background to white on hover */
+  color: #1e3c72; /* Change text color to match your theme */
+  border-color: #1e3c72; /* Set border color on hover */
+}
+
+
+.project-link:hover {
+  background-color: #2a5298;
+  color: white;
 }
 
 /* Experience and Education sections styles */
@@ -252,7 +288,7 @@ html, body {
   .education-item {
     flex-direction: column;
     text-align: center;
-    height: auto; /* Let the height adjust automatically on smaller screens */
+    height: auto;
   }
 
   .project-logo,
