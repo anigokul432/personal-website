@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ opaque }) => {
           </Link>
         </li>
         <li>
-          <Link to="projects" smooth={true} duration={500} offset={-80}>
+          <Link to="projects" smooth={true} duration={500} offset={-20}>
             Projects
           </Link>
         </li>
