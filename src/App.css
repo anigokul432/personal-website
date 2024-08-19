@@ -219,6 +219,7 @@
   width: 80px;
   height: 80px;
   margin-right: 20px;
+  border-radius: 100%;
 }
 
 .experience-details,
@@ -237,7 +238,7 @@
 .education-details p {
   margin: 5px 0;
   font-size: 1.1rem;
-  color: #ccc;
+  color: rgb(255, 255, 255);
 }
 
 .experience-details ul,
@@ -246,9 +247,25 @@
   padding-left: 20px;
   font-size: .9rem;
   line-height: 1.6;
-  color: #ccc;
+  color: rgb(255, 255, 255);
+    list-style-type: disc;
+}
+
+/* Coursework section styling */
+.coursework h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.coursework p {
+  margin: 10px 0 0;
+  font-size: .9rem;
+  line-height: 1.6;
+  color: rgb(255, 255, 255);
   list-style-type: disc;
 }
+
+
 
 /* General body styling */
 body {
@@ -297,6 +314,37 @@ html, body {
     margin-bottom: 10px;
     margin-right: 0;
   }
+
+  /* Hide navbar and show mobile navigation button */
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav-button {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2a5298;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  .mobile-nav-button svg {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav-button {
+    display: none; /* Hide the mobile button on larger screens */
+  }
 }
 
 @media (max-width: 480px) {
@@ -317,5 +365,16 @@ html, body {
   .experience-section h1,
   .education-section h1 {
     font-size: 2rem;
+  }
+
+  /* Adjust button style for very small screens */
+  .mobile-nav-button {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+  }
+
+  .mobile-nav-button svg {
+    margin-left: 0;
   }
 }
