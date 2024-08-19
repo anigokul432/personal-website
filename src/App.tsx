@@ -223,7 +223,7 @@ const App: React.FC = () => {
             <a href="https://github.com/anigokul432" target="_blank" rel="noopener noreferrer" className="social-link">
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
-            <a href="/assets/resume.pdf" download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href={process.env.PUBLIC_URL + '/' + "/assets/resume.pdf"} download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="social-link">
               <FontAwesomeIcon icon={faFileLines} /> Resume
             </a>
           </div>
