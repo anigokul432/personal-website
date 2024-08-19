@@ -7,31 +7,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFileLines, faCircleDown, faCircleUp } from '@fortawesome/free-solid-svg-icons';
 
-
-import infosys from "./assets/infosys.jpg";
-import ctc from "./assets/ctc.png";
-import powerschool from "./assets/powerschool.png";
-
-import ucla from "./assets/ucla.jpg";
-import flc from "./assets/flc.jpg";
-
-import resume from "./assets/resume.pdf";
-
 const projects = [
   {
     id: 1,
-    logo: '/path/to/logo1.png',
+    logo: '/assets/logo1.png', // Updated path
     name: 'Skill Swipe',
     description: 'Mobile app that connects UCLA recruiters and job seekers using a heuristic-based matchmaking algorithm.',
     techStack: 'React, MongoDB, Express, Node, AWS S3, Styled Components',
     demoLink:'https://docs.google.com/presentation/d/1040tB19Hv3Oax3SIPyWwWIa5_a-ZvlebLLw1PvouQ_Y/edit?usp=sharing',
     frontendLink: 'https://github.com/ouragan84/skill-swipe-app',
     backendLink: 'https://github.com/ouragan84/skill-swipe-backend'
-    
   },
   {
     id: 2,
-    logo: '/path/to/logo2.png',
+    logo: '/assets/logo2.png', // Updated path
     name: 'Clever Cloud',
     description: 'AI-driven file management platform integrating vector search with O(1) time complexity for content-based search and 3D visualization.',
     techStack: 'React, Flask, Python, Pinecone, MinIO',
@@ -41,7 +30,7 @@ const projects = [
   },
   {
     id: 3,
-    logo: '/path/to/logo3.png',
+    logo: '/assets/logo3.png', // Updated path
     name: 'Denote',
     description: 'An all-in-one note-taking app with AI-driven features, supporting dynamic educational tools with smart prompts and auto-complete notes.',
     techStack: 'React, Electron, Node.js, p5.js, Desmos API, OpenAI GPT API',
@@ -51,7 +40,7 @@ const projects = [
   },
   {
     id: 4,
-    logo: '/path/to/logo4.png',
+    logo: '/assets/logo4.png', // Updated path
     name: 'AI Finance Coach',
     description: 'Developed user and admin dashboards with AI-driven features to predict credit score trends and offer personalized financial advice.',
     techStack: 'React, Angular, FastAPI, Azure, OpenAI GPT API',
@@ -61,7 +50,7 @@ const projects = [
   }, 
   {
     id: 5,
-    logo: '/path/to/logo5.png',
+    logo: '/assets/logo5.png', // Updated path
     name: 'Sea of Prospects',
     description: 'Ocean simulation game with rigid body physics, cloth simulation, and boid system. Navigate and collect treasures while avoiding obstacles and sharks!',
     techStack: 'JavaScript, HTML, CSS, tiny-graphics.js, p5.js, Euler Integration',
@@ -70,7 +59,7 @@ const projects = [
   },
   {
     id: 6,
-    logo: '/path/to/logo5.png',
+    logo: '/assets/logo5.png', // Updated path
     name: 'Website URL Shortener',
     description: 'Web application that shortens URLs and allows users to customize the subdirectory of the shortened link.',
     techStack: 'HTML, CSS, JavaScript, Tailwind CSS, Flask, SQLAlchemy',
@@ -78,7 +67,7 @@ const projects = [
   },  
   {
     id: 7,
-    logo: '/path/to/logo6.png',
+    logo: '/assets/logo6.png', // Updated path
     name: 'Live Weather App',
     description: 'A weather app that retrieves data from the OpenWeatherAPI, with features like location-based search and time management.',
     techStack: 'React, Tailwind CSS, OpenWeatherAPI, Luxon',
@@ -87,7 +76,7 @@ const projects = [
   },
   {
     id: 8,
-    logo: '/path/to/logo7.png',
+    logo: '/assets/logo7.png', // Updated path
     name: 'Rope and Cloth Simulator',
     description: 'This program simulates rope and cloth physics using Euler integration for accurate physics simulation.',
     techStack: 'HTML, CSS, JavaScript, p5.js, Euler Integration',
@@ -99,7 +88,7 @@ const projects = [
 const experiences = [
   {
     id: 1,
-    logo: infosys,
+    logo: '/assets/infosys.jpg', // Updated path
     title: 'Software Engineer Intern',
     company: 'Infosys',
     duration: 'June 2024 – Present',
@@ -111,7 +100,7 @@ const experiences = [
   },
   {
     id: 2,
-    logo: ctc,
+    logo: '/assets/ctc.png', // Updated path
     title: 'Software Engineer',
     company: 'California Transportation Commission',
     duration: 'March 2021 – Present',
@@ -126,7 +115,7 @@ const experiences = [
   },
   {
     id: 3,
-    logo: powerschool,
+    logo: '/assets/powerschool.png', // Updated path
     title: 'Technology Student Intern',
     company: 'Powerschool',
     duration: 'June 2019 – August 2019',
@@ -138,11 +127,10 @@ const experiences = [
   }
 ];
 
-
 const education = [
   {
     id: 1,
-    logo: ucla,
+    logo: '/assets/ucla.jpg', // Updated path
     degree: 'Bachelor of Science in Computer Science',
     institution: 'University of California, Los Angeles (UCLA)',
     duration: 'Sept 2022 - Jun 2024',
@@ -162,7 +150,7 @@ const education = [
   },
   {
     id: 2,
-    logo: flc,
+    logo: '/assets/flc.jpg', // Updated path
     degree: "Associate's Degree in Computer Science",
     institution: 'Folsom Lake College',
     duration: 'August 2020 - May 2022',
@@ -235,7 +223,7 @@ const App: React.FC = () => {
             <a href="https://github.com/anigokul432" target="_blank" rel="noopener noreferrer" className="social-link">
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
-            <a href={resume} download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="/assets/resume.pdf" download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="social-link">
               <FontAwesomeIcon icon={faFileLines} /> Resume
             </a>
           </div>
@@ -265,7 +253,7 @@ const App: React.FC = () => {
         <div className="experience-grid">
           {experiences.map(exp => (
             <div key={exp.id} className="experience-item">
-              <img src={exp.logo} alt={exp.company} className="experience-logo" />
+              <img src={process.env.PUBLIC_URL + '/' + exp.logo} alt={exp.company} className="experience-logo" />
               <div className="experience-details">
                 <h3>{exp.title}</h3>
                 <p>{exp.company}</p>
@@ -281,24 +269,24 @@ const App: React.FC = () => {
         </div>
       </section>
       <section id="education" className="education-section">
-  <h1>Education</h1>
-  <div className="education-grid">
-    {education.map(edu => (
-      <div key={edu.id} className="education-item">
-        <img src={edu.logo} alt={edu.institution} className="education-logo" />
-        <div className="education-details">
-          <h3>{edu.degree}</h3>
-          <p>{edu.institution}</p>
-          <p>{edu.duration}</p>
-          <div className="coursework">
-            <h4>Relevant Coursework:</h4>
-            <p>{edu.coursework.join(', ')}</p>
-          </div>
+        <h1>Education</h1>
+        <div className="education-grid">
+          {education.map(edu => (
+            <div key={edu.id} className="education-item">
+              <img src={process.env.PUBLIC_URL + '/' + edu.logo} alt={edu.institution} className="education-logo" />
+              <div className="education-details">
+                <h3>{edu.degree}</h3>
+                <p>{edu.institution}</p>
+                <p>{edu.duration}</p>
+                <div className="coursework">
+                  <h4>Relevant Coursework:</h4>
+                  <p>{edu.coursework.join(', ')}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
       <div className="mobile-nav-button" onClick={nextSection}>
         <FontAwesomeIcon icon={isLastSection ? faCircleUp : faCircleDown} />
       </div>

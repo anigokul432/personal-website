@@ -3,7 +3,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import './Navbar.css';
-import logo from '../assets/logo.png';
 
 interface NavbarProps {
   opaque: boolean;
@@ -14,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ opaque }) => {
     <nav className={`navbar ${opaque ? 'opaque' : 'transparent'}`}>
       <div className="logo">
         <a href="/">
-          <img src={logo} alt="Logo" className="logo-image" />
+          <img src={process.env.PUBLIC_URL + '/' + "/assets/logo.png"} alt="Logo" className="logo-image" />
         </a>
       </div>
       <ul className="nav-links">
