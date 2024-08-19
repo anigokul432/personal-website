@@ -44,7 +44,7 @@ const projects = [
     name: 'AI Finance Coach',
     description: 'Developed user and admin dashboards with AI-driven features to predict credit score trends and offer personalized financial advice.',
     techStack: 'React, Angular, FastAPI, Azure, OpenAI GPT API',
-    demoLink: 'https://example.com/demo1',
+    demoLink: 'https://www.youtube.com/watch?v=VVIoMU9ozC4',
     frontendLink: 'https://github.com/anigokul432/bizhacks_dashboard_frontend',
     backendLink: 'https://github.com/example/backend1'
   }, 
