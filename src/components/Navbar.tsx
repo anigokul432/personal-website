@@ -91,17 +91,17 @@ const Navbar: React.FC<NavbarProps> = ({ opaque }) => {
       </div>
       <ul className="flex gap-5 pr-5">
         <li>
-          <Link to="projects" smooth={true} duration={500} offset={-20} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
+          <Link to="projects" smooth={true} duration={500} offset={0} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Projects
           </Link>
         </li>
         <li>
-          <Link to="experience" smooth={true} duration={500} offset={-80} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
+          <Link to="experience" smooth={true} duration={500} offset={0} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Experience
           </Link>
         </li>
         <li>
-          <Link to="education" smooth={true} duration={500} offset={-10} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
+          <Link to="education" smooth={true} duration={500} offset={0} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Education
           </Link>
         </li>

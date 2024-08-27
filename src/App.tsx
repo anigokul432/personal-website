@@ -211,7 +211,7 @@ const App: React.FC = () => {
         <Navbar opaque={navbarOpaque} />
       </div>
 
-      <section id="home" className="flex items-center justify-center min-h-screen bg-gradient-to-b from-slate-200 to-sky-100 text-black p-5">
+      <section id="home" className="flex items-center justify-center min-h-screen bg-gradient-to-b from-slate-100 to-sky-50 text-black p-5">
   <div className="flex w-full max-w-5xl">
     {/* Left Content */}
     <div className="flex-1 flex flex-col justify-center text-left">
@@ -258,8 +258,8 @@ const App: React.FC = () => {
 </section>
 
 
-<section id="projects" className="min-h-screen bg-sky-100 text-black text-center p-5 flex flex-col">
-  <h1 className="text-3xl mb-5 mt-20">Projects</h1>
+<section id="projects" className="min-h-screen bg-sky-50 text-black text-center p-5 flex flex-col">
+  <h1 className="text-4xl mb-5 mt-20">Projects</h1>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 max-w-6xl mx-auto">
     {projects.map((project) => (
       <div
@@ -327,8 +327,8 @@ const App: React.FC = () => {
 </section>
 
 
-      <section id="experience" className="min-h-screen bg-sky-100 text-black text-center p-5 flex flex-col">
-        <h1 className="text-3xl mb-5 mt-5">Experience</h1>
+      <section id="experience" className="min-h-screen bg-sky-50 text-black text-center p-5 flex flex-col">
+        <h1 className="text-4xl mb-5 mt-20">Experience</h1>
         <div className="flex flex-col items-center gap-5 max-w-5xl mx-auto">
           {experiences.map(exp => (
             <div key={exp.id} className="flex flex-col md:flex-row items-center bg-white p-5 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform w-[100%]">
@@ -348,11 +348,11 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <section id="education" className="min-h-screen bg-sky-100 text-black text-center p-5 flex flex-col">
-        <h1 className="text-3xl mb-5 mt-20">Education</h1>
+      <section id="education" className="min-h-screen bg-gradient-to-b from-sky-50 to-slate-100 text-black text-center p-5 flex flex-col">
+        <h1 className="text-4xl mb-5 mt-20">Education</h1>
         <div className="flex flex-col items-center gap-5 max-w-4xl mx-auto">
           {education.map(edu => (
-            <div key={edu.id}className="flex flex-col md:flex-row items-center bg-white p-5 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform w-[100%]">
+            <div key={edu.id}className="flex flex-col md:flex-row items-center bg-white p-5 rounded-lg shadow-lg hover:shadow-lg transform hover:-translate-y-1 transition-transform w-[100%]">
               <img src={process.env.PUBLIC_URL + '/' + edu.logo} alt={edu.institution} className="w-20 h-20 rounded-full mr-5 mb-5 md:mb-0" />
               <div className="text-left">
                 <h3 className="text-2xl text-black">{edu.degree}</h3>
@@ -373,7 +373,7 @@ const App: React.FC = () => {
         <FontAwesomeIcon icon={isLastSection ? faCircleUp : faCircleDown} />
       </div>
 
-      <footer className="bg-sky-100 left-0 right-0 flex items-center justify-center text-center pb-3">
+      <footer className="bg-slate-100 left-0 right-0 flex items-center justify-center text-center pb-3">
   Copyright © {currentYear}
 </footer>
     </>
