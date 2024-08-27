@@ -4,6 +4,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-100px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        fadeInLeft: 'fadeInLeft .6s ease-out',
+        fadeInLeftDelayed: 'fadeInLeft .7s ease-out',
+        fadeInLeftLater: 'fadeInLeft .8s ease-out',
+      },
       fontFamily: {
         sans: [
           '-apple-system',
@@ -30,4 +41,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

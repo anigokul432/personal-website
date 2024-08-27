@@ -210,52 +210,51 @@ const App: React.FC = () => {
       </div>
 
       <section id="home" className="flex items-center justify-center min-h-screen bg-gradient-to-b from-slate-200 to-sky-100 text-black p-5">
-        <div className="flex w-full max-w-5xl">
-          {/* Left Content */}
-          <div className="flex-1 flex flex-col justify-center text-left">
-            <p className="text-xs uppercase tracking-widest text-gray-600 mb-4">Welcome to my portfolio</p>
-            <h1 className="text-5xl font-bold mb-2">
-              Hi, I’m <span className="text-blue-800 py-2">Anieerudh</span>
-            </h1>
-            <h2 className="text-4xl font-light mb-6">
-              a <span className="font-bold">Software Engineer</span>
-            </h2>
-            <p className="text-lg leading-relaxed font-sans text-gray-700 max-w-lg">
-              With a B.S. in Computer Science from <strong className="text-blue-800">UCLA</strong>, I have strong experience in <strong>Full Stack Development</strong>. I specialize in creating efficient, scalable, and user-friendly applications.
-            </p>
+  <div className="flex w-full max-w-5xl">
+    {/* Left Content */}
+    <div className="flex-1 flex flex-col justify-center text-left">
+      <p className="text-xs uppercase tracking-widest text-gray-600 mb-4">Welcome to my portfolio</p>
+      <h1 className="text-5xl font-bold mb-2 animate-fadeInLeft">
+        Hi, I’m <span className="text-blue-800 py-2">Anieerudh</span>
+      </h1>
+      <h2 className="text-4xl font-light mb-6 animate-fadeInLeftDelayed">
+        a <span className="font-bold">Software Engineer</span>
+      </h2>
+      <p className="text-lg leading-relaxed font-sans text-gray-700 max-w-lg animate-fadeInLeftLater">
+        With a B.S. in Computer Science from <strong className="text-blue-800">UCLA</strong>, I have strong experience in <strong>Full Stack Development</strong>. I specialize in creating efficient, scalable, and user-friendly applications.
+      </p>
 
-            <div className="mt-5 flex gap-5 flex-wrap">
-  <a href="https://www.linkedin.com/in/anigokul" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
-    <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-    <span className="hidden sm:inline ml-2">LinkedIn</span> {/* Hidden on mobile */}
-  </a>
-  <a href="https://github.com/anigokul432" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
-    <FontAwesomeIcon icon={faGithub} className="text-xl" />
-    <span className="hidden sm:inline ml-2">GitHub</span> {/* Hidden on mobile */}
-  </a>
-  <a href={process.env.PUBLIC_URL + '/' + "/assets/resume.pdf"} download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
-    <FontAwesomeIcon icon={faFileLines} className="text-xl" />
-    <span className="hidden sm:inline ml-2">Resume</span> {/* Hidden on mobile */}
-  </a>
-</div>
+      <div className="mt-5 flex gap-5 flex-wrap">
+        <a href="https://www.linkedin.com/in/anigokul" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
+          <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
+          <span className="hidden sm:inline ml-2">LinkedIn</span>
+        </a>
+        <a href="https://github.com/anigokul432" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
+          <FontAwesomeIcon icon={faGithub} className="text-xl" />
+          <span className="hidden sm:inline ml-2">GitHub</span>
+        </a>
+        <a href={process.env.PUBLIC_URL + '/' + "/assets/resume.pdf"} download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
+          <FontAwesomeIcon icon={faFileLines} className="text-xl" />
+          <span className="hidden sm:inline ml-2">Resume</span>
+        </a>
+      </div>
+    </div>
 
+    {/* Right Content - Hidden on mobile */}
+    <div className="hidden md:flex flex-1 items-end justify-center relative">
+      {/* Gradient Rectangle */}
+      <div className="w-96 h-64 bg-gradient-to-br from-gray-200 to-white border border-white shadow-lg relative z-0"></div>
 
-          </div>
+      {/* Image */}
+      <img 
+        src={process.env.PUBLIC_URL + '/' + "/assets/me.png"} 
+        alt="Me" 
+        className="w-96 h-auto object-cover absolute bottom-0 z-10" 
+      />
+    </div>
+  </div>
+</section>
 
-          {/* Right Content - Hidden on mobile */}
-          <div className="hidden md:flex flex-1 items-end justify-center relative">
-            {/* Gradient Rectangle */}
-            <div className="w-96 h-64 bg-gradient-to-br from-gray-200 to-white border border-white shadow-lg relative z-0"></div>
-
-            {/* Image */}
-            <img 
-              src={process.env.PUBLIC_URL + '/' + "/assets/me.png"} 
-              alt="Me" 
-              className="w-96 h-auto object-cover absolute bottom-0 z-10" 
-            />
-          </div>
-        </div>
-      </section>
 
       <section id="projects" className="min-h-screen bg-sky-100 text-black text-center p-5 flex flex-col">
         <h1 className="text-3xl mb-5 mt-20">Projects</h1>
