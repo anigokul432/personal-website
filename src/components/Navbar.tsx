@@ -1,8 +1,7 @@
 // src/components/Navbar.tsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import './Navbar.css';
 
 interface NavbarProps {
   opaque: boolean;
@@ -76,40 +75,40 @@ const Navbar: React.FC<NavbarProps> = ({ opaque }) => {
   };
 
   return (
-    <nav className={`navbar ${opaque ? 'opaque' : 'transparent'}`}>
-      <div className="logo-name" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          
-          <Link to="home" smooth={true} duration={500} className="logo-link">
-          <img src={process.env.PUBLIC_URL + '/' + "/assets/logo.png"} alt="Logo" className="logo-image" />
-          <div className="name-container">
-            <span className="logo-text ani">{aniRevealedText}</span>
-            <span className="logo-text gokul">{gokulRevealedText}</span>
+    <nav className={`fixed top-0 w-full z-50 flex justify-between items-center p-4 transition-all duration-300 ${opaque ? 'bg-slate-100 shadow-lg' : 'bg-transparent'} text-black`}>
+      <div className="flex items-center cursor-pointer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Link to="home" smooth={true} duration={500} className="flex items-center">
+          <img 
+            src={process.env.PUBLIC_URL + '/' + "/assets/logo.png"} 
+            alt="Logo" 
+            className={`w-10 h-10 transition-all duration-300 invert`} 
+          />
+          <div className="flex items-center ml-2">
+            <span className="text-xl whitespace-nowrap">{aniRevealedText}</span>
+            <span className="text-xl ml-1 whitespace-nowrap">{gokulRevealedText}</span>
           </div>
-          </Link>
+        </Link>
       </div>
-      <ul className="nav-links">
+      <ul className="flex gap-5 pr-5">
         <li>
-          {/* <Link to="home" smooth={true} duration={500}>
-            Home
-          </Link> */}
-        </li>
-        <li>
-          <Link to="projects" smooth={true} duration={500} offset={-20}>
+          <Link to="projects" smooth={true} duration={500} offset={-20} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Projects
           </Link>
         </li>
         <li>
-          <Link to="experience" smooth={true} duration={500} offset={-80}>
+          <Link to="experience" smooth={true} duration={500} offset={-80} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Experience
           </Link>
         </li>
         <li>
-          <Link to="education" smooth={true} duration={500} offset={-10}>
+          <Link to="education" smooth={true} duration={500} offset={-10} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Education
           </Link>
         </li>
         <li>
-          <a href="mailto:anigokul432@gmail.com">Contact</a>
+          <a href="mailto:anigokul432@gmail.com" className={`text-lg border rounded transition-colors cursor-pointer px-4 py-2 text-black border-black hover:bg-blue-800 hover:text-white`}>
+            Contact
+          </a>
         </li>
       </ul>
     </nav>
