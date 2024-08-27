@@ -9,17 +9,17 @@ import { faFileLines, faCircleDown, faCircleUp } from '@fortawesome/free-solid-s
 const projects = [
   {
     id: 1,
-    logo: '/assets/logo1.png',
+    logo: '/assets/skillswipe.png',
     name: 'Skill Swipe',
     description: 'Mobile app that connects UCLA recruiters and job seekers using a heuristic-based matchmaking algorithm.',
-    techStack: 'React, MongoDB, Express, Node, AWS S3, Styled Components',
+    techStack: 'React Native, MongoDB, Express, Node, AWS S3, Styled Components',
     demoLink: 'https://docs.google.com/presentation/d/1040tB19Hv3Oax3SIPyWwWIa5_a-ZvlebLLw1PvouQ_Y/edit?usp=sharing',
     frontendLink: 'https://github.com/ouragan84/skill-swipe-app',
     backendLink: 'https://github.com/ouragan84/skill-swipe-backend',
   },
   {
     id: 2,
-    logo: '/assets/logo2.png',
+    logo: '/assets/clevercloud.png',
     name: 'Clever Cloud',
     description: 'AI-driven file management platform integrating vector search with O(1) time complexity for content-based search and 3D visualization.',
     techStack: 'React, Flask, Python, Pinecone, MinIO',
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     id: 3,
-    logo: '/assets/logo3.png',
+    logo: '/assets/denote.png',
     name: 'Denote',
     description: 'An all-in-one note-taking app with AI-driven features, supporting dynamic educational tools with smart prompts and auto-complete notes.',
     techStack: 'React, Electron, Node.js, p5.js, Desmos API, OpenAI GPT API',
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     id: 4,
-    logo: '/assets/logo4.png',
+    logo: '/assets/aifinancecoach.png',
     name: 'AI Finance Coach',
     description: 'Developed user and admin dashboards with AI-driven features to predict credit score trends and offer personalized financial advice.',
     techStack: 'React, Angular, FastAPI, Azure, OpenAI GPT API',
@@ -49,24 +49,24 @@ const projects = [
   },
   {
     id: 5,
-    logo: '/assets/logo5.png',
+    logo: '/assets/seaofprospects.png',
     name: 'Sea of Prospects',
     description: 'Ocean simulation game with rigid body physics, cloth simulation, and boid system. Navigate and collect treasures while avoiding obstacles and sharks!',
-    techStack: 'JavaScript, HTML, CSS, tiny-graphics.js, p5.js, Euler Integration',
+    techStack: 'JavaScript, HTML, CSS, tiny-graphics.js, Verlet Integration, GLSL',
     demoLink: 'https://ship.edgarbaudry.dev',
     frontendLink: 'https://github.com/ouragan84/sea-of-prospects',
   },
   {
     id: 6,
-    logo: '/assets/logo5.png',
+    logo: '/assets/cus.png',
     name: 'Website URL Shortener',
     description: 'Web application that shortens URLs and allows users to customize the subdirectory of the shortened link.',
-    techStack: 'HTML, CSS, JavaScript, Tailwind CSS, Flask, SQLAlchemy',
+    techStack: 'HTML, CSS, JavaScript, Tailwind CSS, Flask, SQLAlchemy, SQL',
     backendLink: 'https://github.com/anigokul432/Website-URL-Shortener.git',
   },
   {
     id: 7,
-    logo: '/assets/logo6.png',
+    logo: '/assets/weather.png',
     name: 'Live Weather App',
     description: 'A weather app that retrieves data from the OpenWeatherAPI, with features like location-based search and time management.',
     techStack: 'React, Tailwind CSS, OpenWeatherAPI, Luxon',
@@ -75,7 +75,7 @@ const projects = [
   },
   {
     id: 8,
-    logo: '/assets/logo7.png',
+    logo: '/assets/rnc.png',
     name: 'Rope and Cloth Simulator',
     description: 'This program simulates rope and cloth physics using Euler integration for accurate physics simulation.',
     techStack: 'HTML, CSS, JavaScript, p5.js, Euler Integration',
@@ -90,7 +90,7 @@ const experiences = [
     logo: '/assets/infosys.jpg',
     title: 'Software Engineer Intern',
     company: 'Infosys',
-    duration: 'June 2024 – Present',
+    duration: 'June 2024 – August 2024',
     bullets: [
       'Transitioned LiDAR data into training datasets for self-driving cars, handling 270 million data points',
       'Developed a 3D map (React and Typescript), tracking 50+ self-driving cars on Infosys campuses using WebSocket',
@@ -245,7 +245,7 @@ const App: React.FC = () => {
     {/* Right Content - Hidden on mobile */}
     <div className="hidden md:flex flex-1 items-end justify-center relative">
       {/* Gradient Rectangle */}
-      <div className="w-96 h-64 bg-gradient-to-br from-gray-200 to-white border border-white shadow-lg relative z-0"></div>
+      <div className="w-96 h-64 bg-gradient-to-br from-gray-200 to-white border border-white shadow-xl relative z-0 "></div>
 
       {/* Image */}
       <img 
@@ -258,25 +258,74 @@ const App: React.FC = () => {
 </section>
 
 
-      <section id="projects" className="min-h-screen bg-sky-100 text-black text-center p-5 flex flex-col">
-        <h1 className="text-3xl mb-5 mt-20">Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-          {projects.map(project => (
-            <div key={project.id} className="bg-white text-left p-5 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform">
-              <div className="flex flex-col items-start">
-                <h3 className="text-2xl text-black">{project.name}</h3>
-                <p className="text-gray-700 mt-2">{project.description}</p>
-                <p className="text-gray-700 mt-2"><strong>Tech Used:</strong> {project.techStack}</p>
-                <div className="mt-4 flex gap-3">
-                  {project.demoLink && <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="text-lg px-4 py-2 rounded bg-transparent border border-blue-800 text-blue-800 hover:bg-blue-900 hover:text-white transition-all">Demo</a>}
-                  {project.frontendLink && <a href={project.frontendLink} target="_blank" rel="noopener noreferrer" className="text-lg px-4 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">Frontend</a>}
-                  {project.backendLink && <a href={project.backendLink} target="_blank" rel="noopener noreferrer" className="text-lg px-4 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">{['Website URL Shortener', 'Live Weather App', 'Rope and Cloth Simulator'].includes(project.name) ? 'Source Code' : 'Backend'}</a>}
-                </div>
-              </div>
-            </div>
-          ))}
+<section id="projects" className="min-h-screen bg-sky-100 text-black text-center p-5 flex flex-col">
+  <h1 className="text-3xl mb-5 mt-20">Projects</h1>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 max-w-6xl mx-auto">
+    {projects.map((project) => (
+      <div
+        key={project.id}
+        className="bg-white text-left p-5 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform flex"
+      >
+        {/* Left half - Image placeholder */}
+        <div className=" flex items-center justify-center">
+          <div className="rounded-lg flex items-center justify-center">
+            <img
+              src={process.env.PUBLIC_URL + project.logo}
+              alt={project.name}
+              className="w-[200px] h-[200px] object-contain rounded-lg"
+            />
+          </div>
         </div>
-      </section>
+
+        {/* Right half - Project details */}
+        <div className="flex-1 ml-5 flex flex-col justify-between">
+          <div>
+            <h3 className="text-2xl text-black">{project.name}</h3>
+            <p className="text-gray-700 mt-2">{project.description}</p>
+            <p className="text-gray-700 mt-2">
+              <strong>Tech Used:</strong> {project.techStack}
+            </p>
+          </div>
+          <div className="mt-4 flex gap-3">
+            {project.demoLink && (
+              <a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg px-4 py-2 rounded bg-transparent border border-blue-800 text-blue-800 hover:bg-blue-900 hover:text-white transition-all"
+              >
+                Demo
+              </a>
+            )}
+            {project.frontendLink && (
+              <a
+                href={project.frontendLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg px-4 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all"
+              >
+                Frontend
+              </a>
+            )}
+            {project.backendLink && (
+              <a
+                href={project.backendLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg px-4 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all"
+              >
+                {['Website URL Shortener', 'Live Weather App', 'Rope and Cloth Simulator'].includes(project.name)
+                  ? 'Source Code'
+                  : 'Backend'}
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       <section id="experience" className="min-h-screen bg-sky-100 text-black text-center p-5 flex flex-col">
         <h1 className="text-3xl mb-5 mt-5">Experience</h1>
