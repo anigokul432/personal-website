@@ -202,6 +202,8 @@ const App: React.FC = () => {
     };
   }, [currentSection]);
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       {/* Navbar - Hidden on mobile */}
@@ -323,7 +325,7 @@ const App: React.FC = () => {
       </div>
 
       <footer className="bg-sky-100 left-0 right-0 flex items-center justify-center text-center pb-3">
-  Copyright © 2024
+  Copyright © {currentYear}
 </footer>
     </>
   );
