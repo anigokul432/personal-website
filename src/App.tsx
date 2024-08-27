@@ -209,8 +209,8 @@ const App: React.FC = () => {
       <section id="home" className="home-section">
         <div className="home-content">
           <h1>
-            <span className="highlight">Ani</span>
-            <span className="fade">eerudh Gokulakrishnan</span>
+            <span className="highlight">Hi, this is Ani.</span>
+            {/* <span className="fade">eerudh Gokulakrishnan</span> */}
           </h1>
           <h2>Software Engineer</h2>
           <p>
