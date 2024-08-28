@@ -9,10 +9,20 @@ import { faFileLines, faCircleDown, faCircleUp } from '@fortawesome/free-solid-s
 const projects = [
   {
     id: 1,
+    logo: '/assets/hireai.jpg',
+    name: 'HireAI - AI Interviewer',
+    description: 'Hire AI is an AI-powered platform for creating, managing, and analyzing interactive voice-to-voice interviews for enterprises.',
+    techStack: 'React, Typescript, FastAPI (Python), PostgreSQL, Azure, OpenAI',
+    demoLink: 'https://anigokul432.github.io/ai-v2v-interviewer-frontend/',
+    frontendLink: 'https://github.com/anigokul432/ai-v2v-interviewer-frontend',
+    backendLink: 'https://github.com/anigokul432/ai-v2v-interviewer-backend',
+  },
+  {
+    id: 1,
     logo: '/assets/skillswipe.png',
     name: 'Skill Swipe',
     description: 'Mobile app that connects UCLA recruiters and job seekers using a heuristic-based matchmaking algorithm.',
-    techStack: 'React Native, MongoDB, Express, Node, AWS S3, Styled Components',
+    techStack: 'React Native, MongoDB, Express, Node, AWS S3, Styled Components, Websocket',
     demoLink: 'https://docs.google.com/presentation/d/1040tB19Hv3Oax3SIPyWwWIa5_a-ZvlebLLw1PvouQ_Y/edit?usp=sharing',
     frontendLink: 'https://github.com/ouragan84/skill-swipe-app',
     backendLink: 'https://github.com/ouragan84/skill-swipe-backend',
