@@ -1,5 +1,3 @@
-// src/components/Navbar.tsx
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
@@ -75,11 +73,11 @@ const Navbar: React.FC<NavbarProps> = ({ opaque }) => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 flex justify-between items-center p-4 transition-all duration-300 ${opaque ? 'bg-slate-100 shadow-lg' : 'bg-transparent'} text-black`}>
+    <nav className={`fixed top-0 w-full z-50 flex justify-between items-center p-4 transition-all duration-300 ${opaque ? 'bg-[rgba(255,255,255,0.5)] shadow-lg backdrop-blur-lg' : 'bg-transparent'} text-black`}>
       <div className="flex items-center cursor-pointer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <Link to="home" smooth={true} duration={500} className="flex items-center">
           <img 
-            src={process.env.PUBLIC_URL + '/' + "/assets/logo.png"} 
+            src={process.env.PUBLIC_URL + '/' + "assets/logo.png"} 
             alt="Logo" 
             className={`w-10 h-10 transition-all duration-300 invert`} 
           />
@@ -91,17 +89,17 @@ const Navbar: React.FC<NavbarProps> = ({ opaque }) => {
       </div>
       <ul className="flex gap-5 pr-5">
         <li>
-          <Link to="projects" smooth={true} duration={500} offset={0} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
+          <Link to="projects" smooth={true} duration={500} offset={-72} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Projects
           </Link>
         </li>
         <li>
-          <Link to="experience" smooth={true} duration={500} offset={0} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
+          <Link to="experience" smooth={true} duration={500} offset={-72} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Experience
           </Link>
         </li>
         <li>
-          <Link to="education" smooth={true} duration={500} offset={0} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
+          <Link to="education" smooth={true} duration={500} offset={-72} className={`text-lg hover:text-blue-800 transition-colors cursor-pointer text-black`}>
             Education
           </Link>
         </li>

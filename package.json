@@ -2,8 +2,9 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anigokul432.github.io/personal-website",
+  "homepage": "https://anidev.me/",
   "dependencies": {
+    "@fontsource/open-sans": "^5.0.29",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",

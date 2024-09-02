@@ -6,6 +6,19 @@
   import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faFileLines, faCircleDown, faCircleUp } from '@fortawesome/free-solid-svg-icons';
 
+  const technologies = [
+    { logo: '/assets/react.png', name: 'React' },
+    { logo: '/assets/nodejs.svg', name: 'Node.js' },
+    { logo: '/assets/express.png', name: 'Express' },
+    { logo: '/assets/fastapi.png', name: 'FastAPI' },
+    { logo: '/assets/flask.png', name: 'Flask' },
+    { logo: '/assets/python.png', name: 'Python' },
+    { logo: '/assets/typescript.png', name: 'TypeScript' },
+    { logo: '/assets/azure.png', name: 'Azure' },
+    { logo: '/assets/postgres.png', name: 'PostgreSQL' },
+  ];
+  
+
   const projects = [
     {
       id: 0,
@@ -97,7 +110,7 @@
   const experiences = [
     {
       id: 1,
-      logo: '/assets/infosys.jpg',
+      logo: 'assets/infosys.jpg',
       title: 'Software Engineer Intern',
       company: 'Infosys',
       duration: 'June 2024 – August 2024',
@@ -109,7 +122,7 @@
     },
     {
       id: 2,
-      logo: '/assets/ctc.png',
+      logo: 'assets/ctc.png',
       title: 'Software Engineer',
       company: 'California Transportation Commission',
       duration: 'March 2021 – Present',
@@ -124,7 +137,7 @@
     },
     {
       id: 3,
-      logo: '/assets/powerschool.png',
+      logo: 'assets/powerschool.png',
       title: 'Technology Student Intern',
       company: 'Powerschool',
       duration: 'June 2019 – August 2019',
@@ -139,7 +152,7 @@
   const education = [
     {
       id: 1,
-      logo: '/assets/ucla.jpg',
+      logo: 'assets/ucla.jpg',
       degree: 'Bachelor of Science in Computer Science',
       institution: 'University of California, Los Angeles (UCLA)',
       duration: 'Sept 2022 - Jun 2024',
@@ -159,7 +172,7 @@
     },
     {
       id: 2,
-      logo: '/assets/flc.jpg',
+      logo: 'assets/flc.jpg',
       degree: "Associate's Degree in Computer Science",
       institution: 'Folsom Lake College',
       duration: 'August 2020 - May 2022',
@@ -221,64 +234,88 @@
           <Navbar opaque={navbarOpaque} />
         </div>
 
-        <section id="home" className="flex items-center justify-center min-h-screen bg-gradient-to-b from-slate-100 to-sky-50 text-black p-5">
-    <div className="flex w-full max-w-5xl">
-      {/* Left Content */}
-      <div className="flex-1 flex flex-col justify-center text-left">
-        <p className="text-xs uppercase tracking-widest text-gray-600 mb-4">Welcome to my portfolio</p>
-        <h1 className="text-5xl font-bold mb-2 animate-fadeInLeft">
-          Hi, I’m <span className="text-blue-800 py-2">Anieerudh</span>
-        </h1>
-        <h2 className="text-4xl font-light mb-6 animate-fadeInLeftDelayed">
-          a <span className="font-bold">Software Engineer</span>
-        </h2>
-        <p className="text-lg leading-relaxed font-sans text-gray-700 max-w-lg animate-fadeInLeftLater">
-          With a B.S. in Computer Science from <strong className="text-blue-800">UCLA</strong>, I have strong experience in <strong>Full Stack Development</strong>. I specialize in creating efficient, scalable, and user-friendly applications.
-        </p>
+{/* Home Section */}
+<section id="home" className="flex items-center justify-center h-[80vh] bg-gradient-to-tl from-blue-50 to-white text-black p-5">
+        <div className="flex w-full max-w-5xl pt-20">
+          {/* Left Content */}
+          <div className="flex-1 flex flex-col justify-center text-left">
+            <p className="text-xs uppercase tracking-widest text-gray-600 mb-4">Welcome to my portfolio</p>
+            <h1 className="text-5xl font-bold mb-2 animate-fadeInLeft">
+              Hi, I’m <span className="text-blue-800 py-2">Anieerudh</span>
+            </h1>
+            <h2 className="text-4xl font-light mb-6 animate-fadeInLeftDelayed">
+              a <span className="font-bold">Software Engineer</span>
+            </h2>
+            <p className="text-lg leading-relaxed font-sans text-gray-700 max-w-lg animate-fadeInLeftLater">
+              With a B.S. in Computer Science from <strong className="text-blue-800">UCLA</strong>, I have strong experience in <strong>Full Stack Development</strong>. I specialize in creating efficient, scalable, and user-friendly applications.
+            </p>
 
-        <div className="mt-5 flex gap-5 flex-wrap">
-          <a href="https://www.linkedin.com/in/anigokul" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
-            <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-            <span className="hidden sm:inline ml-2">LinkedIn</span>
-          </a>
-          <a href="https://github.com/anigokul432" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
-            <FontAwesomeIcon icon={faGithub} className="text-xl" />
-            <span className="hidden sm:inline ml-2">GitHub</span>
-          </a>
-          <a href={process.env.PUBLIC_URL + '/' + "/assets/resume.pdf"} download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
-            <FontAwesomeIcon icon={faFileLines} className="text-xl" />
-            <span className="hidden sm:inline ml-2">Resume</span>
-          </a>
+            <div className="mt-5 flex gap-5 flex-wrap">
+              <a href="https://www.linkedin.com/in/anigokul" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
+                <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
+                <span className="hidden sm:inline ml-2">LinkedIn</span>
+              </a>
+              <a href="https://github.com/anigokul432" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
+                <FontAwesomeIcon icon={faGithub} className="text-xl" />
+                <span className="hidden sm:inline ml-2">GitHub</span>
+              </a>
+              <a href={process.env.PUBLIC_URL + '/' + "assets/resume.pdf"} download="Anieerudh_Gokulakrishnan_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-lg px-5 py-2 rounded bg-blue-800 text-white hover:bg-blue-900 transition-all">
+                <FontAwesomeIcon icon={faFileLines} className="text-xl" />
+                <span className="hidden sm:inline ml-2">Resume</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Right Content - Hidden on mobile */}
+          <div className="hidden 3xs:flex flex-1 items-end justify-center relative">
+            {/* Gradient Rectangle */}
+            <div className="w-96 h-64 bg-gradient-to-br from-gray-200 to-white border border-white shadow-xl relative z-0 "></div>
+
+            {/* Image */}
+            <img 
+              src={process.env.PUBLIC_URL + '/' + "assets/me.png"} 
+              alt="Me" 
+              className="w-96 h-auto object-cover absolute bottom-0 z-10" 
+            />
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Right Content - Hidden on mobile */}
-      <div className="hidden md:flex flex-1 items-end justify-center relative">
-        {/* Gradient Rectangle */}
-        <div className="w-96 h-64 bg-gradient-to-br from-gray-200 to-white border border-white shadow-xl relative z-0 "></div>
-
-        {/* Image */}
-        <img 
-          src={process.env.PUBLIC_URL + '/' + "/assets/me.png"} 
-          alt="Me" 
-          className="w-96 h-auto object-cover absolute bottom-0 z-10" 
+      {/* Technologies Section */}
+      <section className="h-[20vh] bg-blue-100 text-black text-center p-5 flex flex-col justify-center">
+  <p className="text-xs uppercase tracking-widest text-gray-600 mb-4">most used technologies</p>
+  <div className="flex 3xs:flex-nowrap flex-wrap justify-center items-center gap-10 max-w-6xl mx-auto overflow-x-auto w-full 3xs:w-[90%] scrollbar-hide">
+    {technologies.map((tech, index) => (
+      <div key={index} className="flex flex-col items-center flex-shrink-0">
+        <img
+          src={process.env.PUBLIC_URL + tech.logo}
+          alt={tech.name}
+          className="w-12 h-12 object-contain mb-2"
         />
+        <p className="text-gray-700 text-sm">{tech.name}</p>
       </div>
-    </div>
-  </section>
+    ))}
+  </div>
+</section>
 
 
-  <section id="projects" className="min-h-screen bg-sky-50 text-black text-center p-5 flex flex-col">
-  <h1 className="text-4xl mb-5 mt-20">Projects</h1>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-6xl mx-auto">
+
+
+  <section id="projects" className="min-h-screen bg-gradient-to-br from-blue-900 to-blue-950 text-black text-center p-5 flex flex-col pb-40">
+  <div className='flex flex-col justify-center items-center pb-10 mt-5'>
+  <h1 className="text-4xl  text-white">Projects</h1>
+  <div className='w-[50px] h-[3px] bg-white mt-5'></div>
+</div>
+
+<div className="grid grid-cols-1 2xs:grid-cols-2 gap-5 max-w-7xl mx-auto">
     {projects.map((project) => (
       <div
         key={project.id}
-        className="bg-white text-left p-5 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform flex flex-col md:flex-row"
+        className="bg-white text-left p-5 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform flex flex-col 3xs:flex-row"
       >
         {/* Left half - Image placeholder */}
         <div className="flex items-center justify-center mb-5 md:mb-0">
-          <div className="rounded-lg flex items-center justify-center w-full h-[200px] md:w-[200px] md:h-[200px]">
+          <div className="rounded-lg flex items-center justify-center w-full h-[200px] 3xs:w-[200px] 3xs:h-[200px]">
             <img
               src={process.env.PUBLIC_URL + project.logo}
               alt={project.name}
@@ -338,8 +375,11 @@
 
 
 
-        <section id="experience" className="min-h-screen bg-sky-50 text-black text-center p-5 flex flex-col">
-          <h1 className="text-4xl mb-5 mt-20">Experience</h1>
+        <section id="experience" className="min-h-screen bg-blue-100 text-black text-center p-5 flex flex-col pb-40">
+        <div className='flex flex-col justify-center items-center pb-10 mt-5'>
+  <h1 className="text-4xl  text-black">Experience</h1>
+  <div className='w-[50px] h-[3px] bg-black mt-5'></div>
+</div>
           <div className="flex flex-col items-center gap-5 max-w-5xl mx-auto">
             {experiences.map(exp => (
               <div key={exp.id} className="flex flex-col md:flex-row items-center bg-white p-5 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform w-[100%]">
@@ -359,9 +399,11 @@
           </div>
         </section>
 
-        <section id="education" className="min-h-screen bg-gradient-to-b from-sky-50 to-slate-100 text-black text-center p-5 flex flex-col">
-          <h1 className="text-4xl mb-5 mt-20">Education</h1>
-          <div className="flex flex-col items-center gap-5 max-w-4xl mx-auto">
+        <section id="education" className="min-h-screen bg-blue-50 text-black text-center p-5 flex flex-col">
+        <div className='flex flex-col justify-center items-center pb-10 mt-5'>
+  <h1 className="text-4xl  text-black">Education</h1>
+  <div className='w-[50px] h-[3px] bg-black mt-5'></div>
+</div>          <div className="flex flex-col items-center gap-5 max-w-4xl mx-auto">
             {education.map(edu => (
               <div key={edu.id}className="flex flex-col md:flex-row items-center bg-white p-5 rounded-lg shadow-lg hover:shadow-lg transform hover:-translate-y-1 transition-transform w-[100%]">
                 <img src={process.env.PUBLIC_URL + '/' + edu.logo} alt={edu.institution} className="w-20 h-20 rounded-full mr-5 mb-5 md:mb-0" />
@@ -384,7 +426,7 @@
           <FontAwesomeIcon icon={isLastSection ? faCircleUp : faCircleDown} />
         </div>
 
-        <footer className="bg-slate-100 left-0 right-0 flex items-center justify-center text-center pb-3">
+        <footer className="bg-blue-50 left-0 right-0 flex items-center justify-center text-center pb-3">
     Copyright © {currentYear}
   </footer>
       </>

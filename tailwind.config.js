@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xs': '700px', // Adjust the size here as needed
+        '3xs': '1200px'
+      },
       keyframes: {
         fadeInLeft: {
           '0%': { opacity: '0', transform: 'translateX(-100px)' },
@@ -16,27 +20,7 @@ module.exports = {
         fadeInLeftLater: 'fadeInLeft .8s ease-out',
       },
       fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          '"Fira Sans"',
-          '"Droid Sans"',
-          '"Helvetica Neue"',
-          'sans-serif',
-        ],
-        mono: [
-          'source-code-pro',
-          'Menlo',
-          'Monaco',
-          'Consolas',
-          '"Courier New"',
-          'monospace',
-        ],
+        sans: ['"Open Sans"', 'sans-serif'],
       },
     },
   },
